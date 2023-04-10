@@ -24,7 +24,7 @@ public class GobalException {
 	}
 
 	@ExceptionHandler(MethodArgumentNotValidException.class)
-	public ResponseEntity<Map<String, String>> MethodArgumentNotValidExceptionHander(
+	public ResponseEntity<Map<String, String>> MethodArgumentNotValidExceptionHandler(
 			MethodArgumentNotValidException ex) {
 		Map<String, String> resp = new HashMap<>();
 		ex.getBindingResult().getAllErrors().forEach((error) -> {
