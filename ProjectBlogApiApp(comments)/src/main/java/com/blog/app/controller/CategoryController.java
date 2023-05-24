@@ -1,5 +1,6 @@
 package com.blog.app.controller;
 
+
 import java.util.List;
 
 import javax.validation.Valid;
@@ -46,7 +47,7 @@ public class CategoryController {
 	
 	//delete
 	@DeleteMapping("/{categoryId}")
-	public ResponseEntity<ApiResponse> deleteCategory(@PathVariable Integer categoryId){
+	public ResponseEntity<ApiResponse> deleteCategory(@PathVariable int categoryId){
 		
 		categoryService.deleteCategory(categoryId);
 		return new ResponseEntity<ApiResponse>(new ApiResponse("Category deleted successfully!!", true),HttpStatus.OK);

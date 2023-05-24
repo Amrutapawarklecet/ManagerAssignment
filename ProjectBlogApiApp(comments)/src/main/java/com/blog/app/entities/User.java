@@ -50,10 +50,4 @@ public class User {
 	@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
 	private Set<Comment> comments = new HashSet<>();
 
-	// many has many roles
-	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	@JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user", 
-	referencedColumnName = "userId"), inverseJoinColumns = @JoinColumn(name = "role", 
-	referencedColumnName = "id"))
-	private Set<Role> roles = new HashSet<>();
 }

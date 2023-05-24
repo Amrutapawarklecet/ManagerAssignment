@@ -1,19 +1,16 @@
 package com.blog.app.services.impl;
 
-import java.util.List;
-import java.util.stream.Collector;
-import java.util.stream.Collectors;
-
-import org.apache.catalina.mapper.Mapper;
-import org.modelmapper.ModelMapper;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.blog.app.entities.Category;
 import com.blog.app.exceptions.ResourceNotFoundExpection;
 import com.blog.app.playloads.CategoryDTO;
 import com.blog.app.repositories.CategoryRepo;
 import com.blog.app.sevices.CategoryService;
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {

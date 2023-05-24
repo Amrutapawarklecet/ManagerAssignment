@@ -11,8 +11,10 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "category_table")
 public class Category {
+
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +27,6 @@ public class Category {
 	private String categoryDescription;
 	
 	//category has many posts
-	@OneToMany(mappedBy="category", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	private List<Post> posts=new ArrayList<>();
+//	@OneToMany(mappedBy="category", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
+//	private List<Post> posts=new ArrayList<>();
 }
